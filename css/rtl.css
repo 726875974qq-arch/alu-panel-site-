@@ -1,0 +1,112 @@
+/* =========================================================
+   RTL Overrides for Arabic version
+   Loaded AFTER style.css on ar/*.html pages
+   ========================================================= */
+
+html[dir="rtl"] body {
+  font-family: 'Cairo', 'Noto Sans Arabic', 'Inter', sans-serif;
+  text-align: right;
+}
+
+html[dir="rtl"] .topbar .sep { margin: 0 10px; }
+
+html[dir="rtl"] .hero-inner {
+  direction: rtl;
+}
+
+html[dir="rtl"] .hero-bg::before {
+  right: auto;
+  left: -10%;
+}
+
+html[dir="rtl"] .page-hero::before {
+  right: auto;
+  left: -20%;
+}
+
+html[dir="rtl"] .eyebrow {
+  text-align: right;
+}
+
+html[dir="rtl"] .nav a.active::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .ticks li {
+  padding-left: 0;
+  padding-right: 22px;
+}
+html[dir="rtl"] .ticks li::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .product-visual::before {
+  left: auto;
+  right: 30px;
+}
+
+html[dir="rtl"] .feature-icon {
+  margin-left: auto;
+}
+
+html[dir="rtl"] .app-card::before {
+  right: auto;
+  left: 20px;
+}
+html[dir="rtl"] .app-card h4 {
+  margin-right: 0;
+  margin-left: 80px;
+}
+
+html[dir="rtl"] .quote {
+  border-left: none;
+  border-right: 4px solid var(--c-accent);
+}
+html[dir="rtl"] .quote::before {
+  right: auto;
+  left: 24px;
+}
+
+html[dir="rtl"] .product-detail.reverse .product-visual { order: 0; }
+html[dir="rtl"] .product-detail .product-visual { order: 2; }
+html[dir="rtl"] .product-detail.reverse .product-visual { order: 0; }
+
+html[dir="rtl"] .spec-table span { text-align: left; }
+
+html[dir="rtl"] .section-head,
+html[dir="rtl"] .page-hero {
+  text-align: center;
+}
+
+html[dir="rtl"] .faq summary { padding-right: 26px; padding-left: 50px; }
+html[dir="rtl"] .faq summary::after {
+  right: auto;
+  left: 26px;
+}
+
+html[dir="rtl"] .contact-card.highlight .ticks li { padding-right: 22px; padding-left: 0; }
+
+html[dir="rtl"] .footer-inner,
+html[dir="rtl"] .footer-col {
+  text-align: right;
+}
+
+html[dir="rtl"] .factory-card {
+  border-left: none;
+  border-right: 3px solid var(--c-accent);
+}
+
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4 {
+  font-family: 'Cairo', 'Noto Sans Arabic', 'Playfair Display', serif;
+}
+
+html[dir="rtl"] .link-arrow::after { content: ' ←'; }
+html[dir="rtl"] .link-arrow { }
+html[dir="rtl"] .hero-actions .btn-ghost::after { }
+
+/* Flip directional arrows in CTAs */
+html[dir="rtl"] .hero-actions a.btn-ghost { }
+
+/* (lang-switch styles live in style.css — shared across all languages) */
