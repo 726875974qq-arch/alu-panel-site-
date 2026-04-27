@@ -1,0 +1,55 @@
+name: Auto-compress Images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'images/**.jpg'
+      - 'images/**.jpeg'
+      - 'images/**.png'
+      - 'images/**.gif'
+
+permissions:
+  contents: write
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install compression tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jpegoptim optipng gifsicle
+
+      - name: Show before sizes
+        run: |
+          echo "=== Image sizes BEFORE compression ==="
+          du -ah images/ | sort -h | tail -30 || true
+
+      - name: Compress JPG / JPEG (quality 85, strip metadata)
+        run: |
+          find images -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec jpegoptim --strip-all --max=85 --preserve {} + || true
+
+      - name: Compress PNG (level 2 = balanced)
+        run: |
+          find images -type f -iname "*.png" -exec optipng -o2 -strip all -preserve {} + || true
+
+      - name: Compress GIF
+        run: |
+          find images -type f -iname "*.gif" -exec gifsicle --batch --optimize=3 {} + || true
+
+      - name: Show after sizes
+        run: |
+          echo "=== Image sizes AFTER compression ==="
+          du -ah images/ | sort -h | tail -30 || true
+
+      - name: Commit compressed images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🗜️ Auto-compress images via GitHub Actions"
+          file_pattern: "images/**"
+          commit_user_name: "Image Compression Bot"
+          commit_user_email: "actions@github.com"
