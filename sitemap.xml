@@ -79,6 +79,9 @@
   <!-- Blog -->
   <url>
     <loc>https://aluminumpanelpro.com/blog/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://aluminumpanelpro.com/blog/"/>
+<xhtml:link rel="alternate" hreflang="ar" href="https://aluminumpanelpro.com/ar/blog/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://aluminumpanelpro.com/blog/"/>
     <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -103,9 +106,22 @@
   </url>
   <url>
     <loc>https://aluminumpanelpro.com/blog/aluminum-facade-panel-thickness-guide.html</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://aluminumpanelpro.com/blog/aluminum-facade-panel-thickness-guide.html"/>
+<xhtml:link rel="alternate" hreflang="ar" href="https://aluminumpanelpro.com/ar/blog/aluminum-facade-panel-thickness-guide.html"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://aluminumpanelpro.com/blog/aluminum-facade-panel-thickness-guide.html"/>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <url><loc>https://aluminumpanelpro.com/ar/blog/aluminum-facade-panel-thickness-guide.html</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+<xhtml:link rel="alternate" hreflang="en" href="https://aluminumpanelpro.com/blog/aluminum-facade-panel-thickness-guide.html"/>
+<xhtml:link rel="alternate" hreflang="ar" href="https://aluminumpanelpro.com/ar/blog/aluminum-facade-panel-thickness-guide.html"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://aluminumpanelpro.com/blog/aluminum-facade-panel-thickness-guide.html"/>
+  </url>
+  <url><loc>https://aluminumpanelpro.com/ar/blog/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+<xhtml:link rel="alternate" hreflang="en" href="https://aluminumpanelpro.com/blog/"/>
+<xhtml:link rel="alternate" hreflang="ar" href="https://aluminumpanelpro.com/ar/blog/"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://aluminumpanelpro.com/blog/"/>
+  </url>
 </urlset>
